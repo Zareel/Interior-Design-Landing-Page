@@ -4,165 +4,326 @@
     margin: 0;
     padding: 0;
     outline: 0;
-    box-sizing: border-box;
-    overflow: hidden;
+    
 }
 body{
+    /* background-color: #0f3f57; */
     background-image: url(./images/bg.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    font-family: "Roboto";
-    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    color:#fff;
 }
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 20px 40px;
+.lists{
+    display: none;
 }
 .logo{
-    width: 110px;
-    margin-top: 30px;
-}
-
-nav .nav-items{
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-left: 130px;
-    list-style-type: none; 
-    height: 15vh;
-}
-.nav-link{
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    margin-right: 50px;   
+    font-size: 15px;
 }
 .call-us{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    text-align: center;
 }
-.line-horizontal{
-    width: 811px to right;
-    margin-left: 380px; 
-    margin-right: 90px; 
-    margin-top: -10px;
+.call-us img{
+    display: none;
 }
-.main-row{
+.call-us h4{
+    font-size: small;
+}
+.nav-items{
     display: flex;
+    flex-direction: row ;
     justify-content: space-between;
-    padding-top: 5%;
+    margin: 10px 10px 10px 10px;
 }
-.card-top{
-    height: 120px;
-    width: 250px; 
-    background-color: #ffffff26;
-    padding: 20px;
-    float: right;
-    margin-right: 170px;  
+
+/* -------------------------------------------------------nav bar ends here-------------------------------------- */
+.hero-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
-.main-row p{
-    margin-top: 8px;
+
+.box-1{
+    width: 250px;
+    height: 130px;
+    background-color: #34475c;
+    opacity: 0.7;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-top: 20px;    
 }
-.puzzle-icon{
-    width: 65px;
-    padding: 3px 15px;
-    padding-top: 2px;
-    border-radius: 20px;
+.puzzle{
+    width: 60px;
+    height: 35px;
     background-color: #fff;
-    text-align: center; 
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 20px;
+    margin-bottom: 20px;
 }
-.main-row h1{
-    font-size: 65px;
-    font-weight: 700;
-    margin-top: 60px;
-    margin-left: 90px;
+.hero-2{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+   
 }
-.hero-button button{
+.box-2{
+    width: 250px;
+    height: 130px;
+    background-color: #34475c;
+    opacity: 0.7;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.bulb{
+    width: 60px;
+    height: 35px;
+    background-color: #fff;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.horizontal-line{
+    display: none;
+}
+
+.btn{
     background-color: transparent;
     color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 5px;
-    padding: 18px 50px;
+    font-size: 10px;
+    font-weight: 400;
+    padding: 10px 25px;
     border: solid #fff;
-    border-radius: 30px;
-    margin-left: 100px;
-}
-.card-bottom{
-    width: 260px;
-    height: 150px;
-    background-color:  #ffffff26;
-    padding: 20px;
-    position: relative;
-    align-self: flex-start;
-    margin-right: 200px;
-    margin-right: 400px;
-}
-.light-bulb{
-    width: 65px;
-    padding: 3px 15px;
-    padding-top: 2px;
     border-radius: 20px;
-    background-color: #fff;
-    text-align: center; 
+    margin-top: 35px; 
+}
+/* ------------------------------------------------------- */
+ @media screen and (min-width:680px){
+    body{
+        background-image: url(./images/bg.jpg);
+        background-position:center;
+        background-repeat: no-repeat; 
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+    .hero-1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; 
+    }
+  
+    .hero-2{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        margin-top: 60px; 
+    } 
+
+
+} 
+/* ------------------------------------------------------ */
+@media screen and (min-width:800px){
+    body{
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+    }
+    .fa-bars{
+        display: none;
+    }
+    .lists{
+        display: inline;
+        list-style-type: none;
+    }
+    .list-item{
+        display: inline;
+        padding: 20px;
+        font-weight: bold;
+        font-size: small;
+    }
+    .horizontal-devider{
+        width: 650px;
+        position: absolute;
+        right: 40px;
+    }
+    .call-us{
+        text-align:start;
+    }
+    .hero-1{
+        display: flex;
+        flex-direction: row;
+        margin-top: 90px;
+        justify-content: space-around;
+    }
+    .hero-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 100px;
+        margin-left: 50px;   
+    }  
+}
+@media screen and (min-width:1050px){
+    .logo{
+        flex: 2;
+    }
+    h1{
+        font-size: 40px;
+        margin-left: 20px;
+    }
+    .call-us{
+        display: flex;
+        flex-direction:row;
+    }
+    .call-us img{
+        display: flex;
+    }
 }
 
-@media screen and (max-width:1155px) {
-    .cards{
-        display: none;
+@media screen and (min-width:1050px){
+    .btn{
+        background-color: transparent;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 18px 50px;
+        border: solid #fff;
+        border-radius: 30px;
+        margin-left: 20px;
     }
-    .nav-link{
-        display: none;
-    }
-   .call-us{
-        display: none;
-   }
-   .hero-button button{
-        align-items: center;
-        justify-content: center;
-   }
-   .line-horizontal{
-        display: none;
-   }
-   
 }
-@media screen and ( max-width: 950px){
-   
-    .hero-heading h1{
-        font-size: 50px;
-        text-align: center;
+@media screen and (min-width:1050px){
+    body{
+        background-image: url(./images/bg.jpg);
+        height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: "Roboto", sans-serif;
+        color:#fff;
     }
-    .hero-button button{
-        justify-content: center;
+    .nav-items{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        margin: 20px 40px 0 40px;
+    }
+    .lists{
+        list-style-type: none;
+    }
+    .list-item{
+        display: inline;
+        padding: 40px;
+        font-weight: bold;
+    }
+    
+    .call-us{
+        display: flex;
+        flex-direction:row;
+    }
+    .logo{
+        flex: 2;
+        font-size: 25px;
+    }
+    .horizontal-devider{
+        width: 900px;
+        position: absolute;
+        right: 40px;
+    }
+    .box-1{
+        width: 250px;
+        height: 130px;
+        background-color: #34475c;
+        opacity: 0.7;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-right: 150px;
+        margin-top: -90px;
+        
+    
+    }
+    .hero-1{
+        display: flex;
+        flex-direction: row;
+        margin-top: 150px;
+        justify-content: space-between;
+    }
+    h1{
+        font-size: 60px;
+        margin-left: 70px;
+    }
+    .hero-2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 100px;
+        margin-left: 50px;
         
     }
-}
+    .btn:hover{
+        background-color: #fff;
+        color: #000;
+    }
+    .btn{
+        margin-top: -90px;
+    }
     
+    .box-2{
+        width: 250px;
+        height: 130px;
+        background-color: #34475c;
+        opacity: 0.7;
+        padding-top: 20px;
+        padding-left: 20px;
+        position: relative;
+        right: 455px;
+    
+    }
+    .call-us h4{
+        font-size: 15px;
+    }
+    .list-item{
+        font-size: 15PX;
+    }
+}
 
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (min-width:1247px){
+    .vertical-line{
+        border-left: 1px solid #fff;
+        height: 60px;
+        position: absolute;
+        right: 210px;
+    }
+    .dot-1{
+        background-color: #fff;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        position: absolute;
+        right: 202px;
+        top: 393px;
+        
+    }
+    .horizontal-line{
+        display: inline;
+        visibility: visible ;
+        position: absolute;
+        right: 378px;
+        top: 530px;
+    }
+    .dot-2{
+        background-color: #fff;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        position: absolute;
+        right: 368px;
+        top: 523px;
+    }
+}
